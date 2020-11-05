@@ -1,0 +1,2 @@
+
+GET {{$dotenv LOCAL_ENDPOINT}} HTTP/1.1

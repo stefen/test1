@@ -1,0 +1,22 @@
+{
+    "name": "pandarose/func-starter",
+    "description": "",
+    "type": "project",
+    "repositories": [
+        {"type": "composer", "url": "https://repo.packagist.com/pandarose/"},
+        {"packagist.org": false}
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/classes",
+            "App\\Test\\": "app/tests"
+        }
+    },
+    "require": {
+        "pandarose/kojo-app": "v1.1.0.x-dev",
+        "pandarose/kojo-console": "dev-master",
+        "pandarose/kojo-func": "dev-master",
+        "pandarose/kojo-log": "dev-master"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  - port: 8001
+
+tasks:
+  - init: mkdir ~/.ssh; touch ~/.ssh/known_hosts; ssh-keyscan github.com >> ~/.ssh/known_hosts; echo "LOCAL_ENDPOINT=$(gp url 8001)" > example/.env; composer config -g github-oauth.github.com $GITHUB_TOKEN; composer config --global --auth http-basic.repo.packagist.com $PACKAGIST_USER $PACKAGIST_PASS; composer install;
+    command: yarn standalone-http
+
+vscode:
+  extensions:
+    - humao.rest-client@0.24.2:tiNIwP71m33jcKqZcyO2EQ==
